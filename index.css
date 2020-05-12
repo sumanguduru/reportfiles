@@ -6832,8 +6832,8 @@ ul.steps>.error {
 }
 
 /* -- [ dashboard-view ] -- */
-#dashboard-view .card-panel {
-	margin-bottom: 10px !important;
+#dashboard-view {
+	padding-left: 90px;
 }
 
 #dashboard-view .r {

@@ -6486,7 +6486,7 @@ nav ul i {
 	display: table;
 	overflow: hidden;
 }
-div.container #dashboard-view{
+#dashboard-view{
 	padding-left: 90px;
 }
 .subview-left, .subview-right {

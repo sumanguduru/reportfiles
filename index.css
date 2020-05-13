@@ -6388,7 +6388,7 @@ td {
 /* -- [ card, card-panel ] -- */
 .card-panel .panel-lead {
 	bottom: 10px;
-	font-size: 15px;
+/* 	font-size: 15px; */
 	position: absolute;
 	right: 15px;
 }

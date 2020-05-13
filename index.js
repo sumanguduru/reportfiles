@@ -43,9 +43,7 @@ a(document).off("keyup.leanModal"+f),g.velocity({opacity:0},{duration:c.out_dura
             testElement.text(totalTests.length);
 
             $('div:nth-child(2)>div.card-panel.r>div').text(stepElements.length);
-            $('div:nth-child(3)>div.card-panel.r>div').text($('.test-start-time').text());
-            $('div:nth-child(4)>div.card-panel.r>div').text($('.test-end-time').text());
-            $('div:nth-child(5)>div.card-panel.r>div').text($('.test-total-time').text());
+           
             var totalPass = 0;
             var totalFail = 0;
             var totalSkip = 0;
@@ -64,7 +62,13 @@ a(document).off("keyup.leanModal"+f),g.velocity({opacity:0},{duration:c.out_dura
             }
             var totalper = (totalPass/(totalPass+totalFail+totalSkip))*100
             $('#summary-table>tbody:last-child').append('<tr> <th>TOTAL</th> <th>' + totalPass + '</th><th>' + totalFail + '</th><th>' + totalSkip + '</th><th>' + totalper.toFixed(2) + ' %</th></tr>');
-          });
+         
+	 $('#summary-table>tbody:last-child').append('<tr> <th>TOTAL</th> <th>' + totalPass + '</th><th>' + totalFail + '</th><th>' + totalSkip + '</th><th>' + totalper.toFixed(2) + ' %</th></tr>');
+            $('div:nth-child(3)>div.card-panel.r>div').text(totalPass);
+            $('div:nth-child(4)>div.card-panel.r>div').text(totalFail);
+            $('div:nth-child(5)>div.card-panel.r>div').text(totalper.toFixed(2));
+ 
+ 	});
 
 
 

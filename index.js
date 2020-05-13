@@ -33,6 +33,41 @@ a(document).off("keyup.leanModal"+f),g.velocity({opacity:0},{duration:c.out_dura
 
 			});
 
+
+ $(document).ready(function () {
+            var totalTests = $('.test-heading>.test-name');
+            var nodeList = $('.test-collection .collapsible.node-list');
+            var totalTime = $('.test-heading>.test-time');
+            var testElement = $('div:nth-child(1)>div.card-panel.r>div');
+            var stepElements = $('#test-collection ul > li> div.collapsible-header > div');
+            testElement.text(totalTests.length);
+
+            $('div:nth-child(2)>div.card-panel.r>div').text(stepElements.length);
+            $('div:nth-child(3)>div.card-panel.r>div').text($('.test-start-time').text());
+            $('div:nth-child(4)>div.card-panel.r>div').text($('.test-end-time').text());
+            $('div:nth-child(5)>div.card-panel.r>div').text($('.test-total-time').text());
+            var totalPass = 0;
+            var totalFail = 0;
+            var totalSkip = 0;
+            for (var i = 0; i < totalTests.length; i++) {
+              var passLength = $(nodeList[i]).find('li[pass]').clone().length
+              var failLength = $(nodeList[i]).find('li[fail]').clone().length
+              var skipLength = $(nodeList[i]).find('li[skip]').clone().length
+              var testName = $(totalTests[i]).text();
+              var total = parseInt(passLength) + parseInt(failLength)+parseInt(skipLength);
+              var per = (parseInt(passLength) / total) * 100;
+              totalPass += parseInt(passLength);
+              totalFail += parseInt(failLength);
+              totalSkip += parseInt(skipLength);
+              $('#summary-table>tbody:last-child').append('<tr> <th>' + testName + '</th> <th>' + passLength + '</th><th>' + failLength + '</th><th>' + skipLength + '</th><th>' + per.toFixed(2) + ' %</th></tr>');
+
+            }
+            var totalper = (totalPass/(totalPass+totalFail+totalSkip))*100
+            $('#summary-table>tbody:last-child').append('<tr> <th>TOTAL</th> <th>' + totalPass + '</th><th>' + totalFail + '</th><th>' + totalSkip + '</th><th>' + totalper.toFixed(2) + ' %</th></tr>');
+          });
+
+
+
 			/* -- [ sidenav - toggle views ] -- */
 			$('.side-nav a').click(function() {
 				$('.side-nav li').removeClass('active');

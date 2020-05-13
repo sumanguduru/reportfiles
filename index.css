@@ -6489,6 +6489,10 @@ nav ul i {
 #dashboard-view{
 	padding-left: 90px;
 }
+
+#summary-table > tbody > tr:last-child{
+	 color: coral;
+}
 .subview-left, .subview-right {
 	display: block;
 	overflow-y: auto;

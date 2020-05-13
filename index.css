@@ -3124,18 +3124,21 @@ nav ul a span.badge {
 	right: auto
 }
 
-.row .col.s2 {
-  width: 18.6666666667%;
-  margin-left: auto;
-  left: auto;
-  right: auto
-}
+
 
 .row .col.s3 {
 	width: 25%;
 	margin-left: auto;
 	left: auto;
 	right: auto
+}
+
+
+.row .col.s2 {
+	  width: 18.6666666667%;
+	  margin-left: auto;
+	  left: auto;
+	  right: auto
 }
 
 .row .col.s4 {

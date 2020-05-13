@@ -6385,13 +6385,8 @@ td {
 	cursor: pointer;
 }
 
-/* -- [ card, card-panel ] -- */
-.card-panel .panel-lead {
-	bottom: 10px;
-/* 	font-size: 15px; */
-	position: absolute;
-	right: 15px;
-}
+
+
 
 /* -- [ logo ] -- */
 nav .brand-logo {
@@ -6402,6 +6397,12 @@ nav .brand-logo {
 	font-weight: 600;
 	width: 150px;
 	padding-top: 1px;
+}
+/* -- [ card, card-panel ] -- */
+.card-panel .panel-lead {
+	bottom: 10px;
+	position: absolute;
+	right: 15px;
 }
 
 /* -- [ nav ] -- */
